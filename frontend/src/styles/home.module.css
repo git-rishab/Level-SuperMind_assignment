@@ -28,3 +28,19 @@
 .card > p {
   margin: 10px 0;
 }
+.cont{
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.cont > div{
+  margin-bottom: 20px;
+}
+
+.loginCont{
+  width: 45%;
+  margin: auto;
+  margin-top: 100px;
+}

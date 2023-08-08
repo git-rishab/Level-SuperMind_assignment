@@ -2,6 +2,8 @@ import { useForm } from '@mantine/form';
 import { TextInput, Button, Box } from '@mantine/core';
 import { url } from '../notification';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
+import styles from "../styles/dashboard.module.css"
 
 function Makepost() {
     const navigate = useNavigate();
@@ -28,16 +30,20 @@ function Makepost() {
             .catch(err => console.log(err))
     }
     return (
-        <Box maw={320} mx="auto">
-            <form onSubmit={form.onSubmit(handleSybmit)}>
-                <TextInput label="title" placeholder="title" {...form.getInputProps('title')} />
-                <TextInput mt="sm" label="content" placeholder="content" {...form.getInputProps('content')} />
+        <>
+            <Navbar />
+            <Box maw={320} mx="auto">
+                <h2>Create Post</h2>
+                <form className={styles.form} onSubmit={form.onSubmit(handleSybmit)}>
+                    <TextInput label="Title" placeholder="title" {...form.getInputProps('title')} />
+                    <TextInput mt="sm" label="Content" placeholder="content" {...form.getInputProps('content')} />
 
-                <Button type="submit" mt="sm">
-                    Submit
-                </Button>
-            </form>
-        </Box>
+                    <Button type="submit" mt="sm">
+                        Submit
+                    </Button>
+                </form>
+            </Box>
+        </>
     );
 }
 

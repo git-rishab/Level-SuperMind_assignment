@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { url } from '../notification';
-import styles from "../styles/home.module.css"
+import styles from "../styles/home.module.css";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
     const navigate = useNavigate();
@@ -13,14 +14,17 @@ export default function Home() {
 
     return (
         <div className={styles.body}>
-            {
-                data?.map((el,i)=>(
-                    <div key={i} className={styles.card}>
-                        <h3>{el.title}</h3>
-                        <p>{el.content}</p>
-                    </div>
-                ))
-            }
+            <Navbar/>
+            <div className={styles.cont}>
+                {
+                    data?.map((el,i)=>(
+                        <div key={i} className={styles.card}>
+                            <h3>{el.title}</h3>
+                            <p>{el.content}</p>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     )
 }

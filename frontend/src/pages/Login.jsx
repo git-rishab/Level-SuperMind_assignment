@@ -8,10 +8,12 @@ export default function LoginPage() {
     const navigate = useNavigate();
 
     return (
-        <div>
-            {/* <Navbar /> */}
-            <h1>Welcome to Blog Application</h1>
-            <Login className={styles.login} />
-        </div>
+        <>
+            <Navbar />
+            <div className={styles.loginCont}>
+                <h1>Welcome to Blog Application</h1>
+                <Login className={styles.login} />
+            </div>
+        </>
     )
 }
