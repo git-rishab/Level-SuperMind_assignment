@@ -44,7 +44,7 @@ export default function Login() {
         if(res.ok){
             notification('Login Successfull', 'Welcome to Blog App', 'white', '#66BB6A');
             sessionStorage.setItem("token",res.token)
-            navigate("/home")
+            navigate("/dashboard")
         } else {
             notification(res.message, '', 'white', '#EF5350');
         }

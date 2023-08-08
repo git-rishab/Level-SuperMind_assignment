@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import { url } from '../notification';
+import styles from "../styles/home.module.css"
 
 export default function Home() {
     const navigate = useNavigate();
+    const [data, setData] = useState([]);
     
+    useEffect(()=>{
+        fetch(`${url}/blog/get`).then((raw)=>raw.json()).then((data)=>setData(data.blogs))
+    },[])
 
     return (
-        <div style={{width:"100%"}}>
-            <Navbar />
-            
+        <div className={styles.body}>
+            {
+                data?.map((el,i)=>(
+                    <div key={i} className={styles.card}>
+                        <h3>{el.title}</h3>
+                        <p>{el.content}</p>
+                    </div>
+                ))
+            }
         </div>
     )
 }
