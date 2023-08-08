@@ -13,7 +13,7 @@ This project is a company assignment given by the company called Cointab. The ob
 
 
 ## Video Walkthrough of the project
-- Video: https://drive.google.com/file/d/19uEfRH-wC2eSP7jYF_a8YnHilKYq4ZlC/view
+- Video: https://drive.google.com/drive/folders/1abMzUGCD1Z0OHyRedR2dspNiYW3_aLu9?usp=sharing
   
 ## Features
 The project includes the following features:
