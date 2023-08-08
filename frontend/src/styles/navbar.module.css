@@ -1,0 +1,16 @@
+.nav{
+    position: absolute;
+    top: 0;
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid red;
+}
+
+.div{
+    display: flex;
+}
+
